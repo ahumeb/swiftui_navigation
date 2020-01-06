@@ -10,7 +10,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        
+        NavigationView {
+            
+            VStack() {
+                // Imagen de Encabezado
+                ImagenTest(nombreImagen: "brooklyn_bridge")
+                
+                // Presentación de la App
+                Text("New York")
+                    .font(.largeTitle)
+                Text("Una guía para saber qué hay que conocer")
+                    .font(.footnote)
+                    .foregroundColor(Color.gray)
+                
+                // Botón para ir al detalle
+                NavigationLink(destination: LugaresView()) {
+                    Text("Ver lugares de interes")
+                }.padding(.top, 40.0)
+                
+            }
+        }
+            
     }
 }
 
